@@ -128,9 +128,16 @@
 
         /* 에디터 내 프리뷰 박스는 높이 제한 없이 */
         .editor-container .preview-box {
-            max-height: none;
-            overflow: visible;
-            align-items: flex-start;
+            max-height: none !important;
+            overflow: visible !important;
+            align-items: flex-start !important;
+            height: auto !important;
+            display: block !important;
+        }
+
+        .editor-container .preview-box svg {
+            max-width: 100% !important;
+            height: auto !important;
         }
 
         .try-it-btn {
