@@ -119,11 +119,19 @@
             align-items: center;
             justify-content: center;
             min-height: 200px;
+            max-height: 600px;
+            overflow: auto;
         }
 
         .preview-box svg {
             max-width: 100%;
             height: auto;
+        }
+
+        /* 에디터 내 프리뷰 박스는 높이 제한 없이 */
+        .editor-container .preview-box {
+            max-height: none;
+            overflow: visible;
         }
 
         .try-it-btn {
