@@ -138,10 +138,17 @@
         }
 
         .editor-container .preview-box svg {
-            max-width: 100% !important;
+            max-width: 700px !important;
+            width: auto !important;
             height: auto !important;
             display: inline-block !important;
             vertical-align: top;
+        }
+
+        @media (max-width: 768px) {
+            .editor-container .preview-box svg {
+                max-width: 100% !important;
+            }
         }
 
         .try-it-btn {
@@ -1458,7 +1465,12 @@ graph TD
         mermaid.initialize({
             startOnLoad: true,
             theme: 'default',
-            securityLevel: 'loose'
+            securityLevel: 'loose',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
         });
 
         let currentLesson = 0;
