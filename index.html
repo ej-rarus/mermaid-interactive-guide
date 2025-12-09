@@ -515,6 +515,31 @@
                 right: 5px;
             }
         }
+
+        /* 처음부터 다시 시작 버튼 호버 */
+        .restart-btn {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .restart-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #f0f0f0;
+        }
+
+        .restart-btn:active {
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
@@ -1448,7 +1473,10 @@ graph TD
                 </div>
 
                 <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 2px solid rgba(255,255,255,0.3);">
-                    <p style="font-size: 1.1em; opacity: 0.9;">
+                    <button onclick="goToLesson(0)" class="restart-btn">
+                        🔄 처음부터 다시 시작하기
+                    </button>
+                    <p style="font-size: 1.1em; opacity: 0.9; margin-top: 20px;">
                         Happy Diagramming! 🎨✨
                     </p>
                 </div>
